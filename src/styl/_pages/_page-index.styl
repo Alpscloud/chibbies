@@ -1,0 +1,94 @@
+.sect__promo
+	min-height 810px
+	position relative
+	padding-top 110px
+	padding-bottom 75px
+	&:before
+		pseudo()
+		position absolute
+		bottom -5px
+		width 100%
+		z-index 1
+		height 150px
+		background linear-gradient(180deg, rgba(72, 16, 127, 0) 0%, #48107F 86.98%)
+	
+	.container
+		position relative
+		z-index 5
+		
+
+.promo-stars
+	position absolute
+	position-center()
+	z-index 1
+	width 1276px
+	height 727px
+	background url('../img/decor/promo-stars.svg') 50% no-repeat / contain
+	
+.title
+	font 44px $SemiBold
+	text-align center
+	span
+		display block
+		text-transform uppercase
+		font-size 114px
+		line-height 1
+		
+
+.promo-block
+	&__img
+		position relative
+		max-width 930px
+		margin -60px auto 0
+		img
+			display block
+			
+		.btn
+			position absolute
+			horisontal-center()
+			bottom -15px
+			z-index 2
+			
+// Characters
+.sect__characters
+	padding 55px 0 140px
+	background url('../img/decor/characters-bg.png') top 55px center no-repeat
+.characters
+	position relative
+	padding 60px 20px 50px
+	z-index 3
+	
+	&:before
+		pseudo()
+		position absolute
+		z-index -1
+		border-radius 40px
+		fullSize()
+		background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.006) 100.01%)
+		box-shadow 0px 4px 124px rgba(0, 0, 0, 0.15), inset 1px 2px 0px rgba(255, 255, 255, 0.13), inset -1px -2px 0px rgba(0, 0, 0, 0.1)
+		backdrop-filter blur(44px)
+
+			
+	.sect-description
+		margin 0 auto 40px
+		max-width 660px
+		
+.pin
+	display inline-block
+	width 80px
+	height 80px
+	background url('../img/decor/pin.svg') 50% no-repeat / contain
+	position absolute
+	z-index 1
+	&:nth-child(1)
+		top 30px
+		left 30px
+	&:nth-child(2)
+		top 30px
+		right 30px
+	&:nth-child(3)
+		bottom 30px
+		left 30px
+	&:nth-child(4)
+		bottom 30px
+		right 30px

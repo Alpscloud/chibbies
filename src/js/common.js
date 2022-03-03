@@ -17,5 +17,33 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	$(window).on('scroll', function(e) {
+		if($(this).scrollTop() > 0) {
+			$('.header').addClass('is-fixed');
+		} else {
+			$('.header').removeClass('is-fixed');
+		}
+	});
+
+
+	if ($('.js-characters-slider').length > 0) {
+		var charactersSlider = new Swiper('.js-characters-slider', {
+			slidesPerView: 'auto',
+			loop: true,
+			speed: 700,
+			centeredSlides: true,
+			slidesPerGroup: 3,
+			navigation: {
+				nextEl: '.js-characters-slider-btn-next',
+				prevEl: '.js-characters-slider-btn-prev',
+			},
+			pagination: {
+				el: '.js-characters-slider-pagination',
+				type: 'bullets',
+				clickable: true
+			},
+		});
+	}
+
 
 });

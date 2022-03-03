@@ -21,3 +21,78 @@
 .swiper-container
 	*
 		box-sizing border-box
+		
+.slider-controls
+	display flex
+	align-items center
+	flex-wrap nowrap
+	justify-content center
+	margin-top 40px
+	
+.slider-pagination
+	white-space nowrap
+	margin-left 40px
+	margin-right 40px
+	.swiper-pagination-bullet
+		width 16px
+		height 16px
+		border-radius 3px
+		background-color $basic-white-color
+		opacity 1
+		margin-right 25px
+		&-active
+			background-color $accent-color
+		&:last-child
+			margin-right 0
+		&:before
+			display none
+	
+
+
+.characters-slider
+	
+	.swiper-container,
+	.swiper-wrapper
+		overflow visible
+		
+
+	.swiper-slide
+		width 330px
+		padding-left 15px
+		padding-right 15px
+		&:nth-child(5n+1)
+			.character-card__img
+				background-color $purple-bg
+		&:nth-child(5n+2)
+			.character-card__img
+				background-color $yellow-bg
+		&:nth-child(5n+3)
+			.character-card__img
+				background-color $red-bg
+		&:nth-child(5n+4)
+			.character-card__img
+				background-color $blue-bg
+		&:nth-child(5n+5)
+			.character-card__img
+				background-color $green-bg
+		
+		
+.character-card
+	position relative
+	padding 15px
+	overflow hidden
+	background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.01) 100.01%)
+	border-radius 40px
+	&__inner
+		border-radius 34px
+		background linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.39) 100%)
+		padding 3px
+	&__img
+		height 330px
+		flex-col-center()
+		border-radius 33px
+		padding 40px 15px
+		background-color $purple-bg
+		img
+			@extends .content-img
+		

@@ -1,2 +1,33 @@
 .header
-	background-color $header-bg
+	position fixed
+	top 0
+	left 0
+	z-index 10
+	width 100%
+	padding 15px 0
+	.container
+		position relative
+		z-index 1
+	&:before
+		pseudo()
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		transition opacity .17s ease-in-out
+		background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.006) 100.01%)
+		box-shadow 0px 4px 124px rgba(0, 0, 0, 0.15), inset 1px 2px 0px rgba(255, 255, 255, 0.13), inset -1px -2px 0px rgba(0, 0, 0, 0.1)
+		backdrop-filter blur(44px)
+		opacity 0
+		
+	.btn
+		width 100%
+		max-width 150px
+		margin-right 20px
+		&:last-child
+			margin-right 0
+			
+	&.is-fixed
+		&:before
+			opacity 1
