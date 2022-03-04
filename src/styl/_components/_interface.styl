@@ -1,0 +1,180 @@
+.coin
+	display inline-block
+	background-repeat no-repeat
+	background-size contain
+	background-position 50%
+	position absolute
+	z-index -2
+	animation-direction alternate
+	animation-timing-function linear
+	animation-iteration-count infinite
+	animation-duration 5s
+	animation-name coinLevitation
+	top 50% !important
+	left 50% !important
+	bottom auto !important
+	right auto !important
+	opacity 0
+	transition all 1s ease
+	&-lg
+		background-image url('../img/decor/coins/coin-lg.png')
+		width 327px
+		height 327px
+		animation-duration 5s
+		opacity 1
+		
+	&-1
+		width 210px
+		height 210px
+		background-image url('../img/decor/coins/coin1.png')
+		z-index 1
+		animation-duration 6s
+		
+	&-2
+		width 337px
+		height 337px
+		background-image url('../img/decor/coins/coin2.png')
+		z-index -2
+		animation-duration 4s
+		
+	&-3
+		width 154px
+		height 154px
+		background-image url('../img/decor/coins/coin3.png')
+		animation-duration 4.5s
+		
+	&-4
+		width 153px
+		height 153px
+		background-image url('../img/decor/coins/coin4.png')
+		animation-duration 3.5s
+		
+	&-5
+		width 265px
+		height 265px
+		background-image url('../img/decor/coins/coin5.png')
+		z-index 1
+		animation-duration 6.5s
+		
+	&-6
+		width 288px
+		height 288px
+		background-image url('../img/decor/coins/coin6.png')
+		z-index -2
+		animation-duration 5s
+		
+	&-7
+		width 153px
+		height 153px
+		background-image url('../img/decor/coins/coin7.png')
+		animation-duration 3.5s
+		
+	&-8
+		width 153px
+		height 153px
+		background-image url('../img/decor/coins/coin8.png')
+		animation-duration 5s
+		
+	&-9
+		width 350px
+		height 350px
+		background-image url('../img/decor/coins/coin9.png')
+		animation-duration 6s
+		
+		
+.opportunity.is-animated
+	.coin
+		opacity 1
+		&-1
+			top -45px !important
+			left -60px !important
+			bottom auto !important
+			right auto !important
+		
+		&-2
+			bottom -120px !important
+			right -80px !important
+			left auto !important
+			top auto !important
+
+			
+		&-3
+			right 75px !important
+			top -120px !important
+			bottom auto !important
+			left auto !important
+
+			
+		&-4
+			right -110px !important
+			top 0 !important
+			left auto !important
+			bottom auto !important
+
+			
+		&-5
+			top -180px !important
+			left -20px !important
+			right auto !important
+			bottom auto !important
+
+			
+		&-6
+			right -60px !important
+			top -125px !important
+			left auto !important
+			bottom auto !important
+
+			
+		&-7
+			top 50% !important
+			left -95px !important
+			right auto !important
+			bottom auto !important
+			
+			
+		&-8
+			top 100% !important
+			right 0 !important
+			left auto !important
+			bottom auto !important
+			
+		&-9
+			left -250px !important
+			bottom -100px !important
+			top auto !important
+			right auto !important
+
+		
+@keyframes coinLevitation
+	0%
+		transform translateY(-10px)
+	50%
+		transform translateY(10px)
+	100%
+		transform translateY(-10px)
+		
+.comet
+	display inline-block
+	width 31px
+	height 31px
+	background linear-gradient(140.1deg, #78C2E1 -16.79%, #FFD25E 44.96%, #DC5ACF 78.42%)
+	position absolute
+	border-radius 50%
+	filter blur(5px)
+	&-lg
+		width 70px
+		height 70px
+		
+
+
+	
+		
+
+
+.characters
+	.coin
+		bottom -220px !important
+		right -140px !important
+		top auto !important
+		left auto !important

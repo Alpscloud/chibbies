@@ -27,23 +27,50 @@ $(document).ready(function() {
 
 
 	if ($('.js-characters-slider').length > 0) {
-		var charactersSlider = new Swiper('.js-characters-slider', {
-			slidesPerView: 'auto',
-			loop: true,
-			speed: 700,
-			centeredSlides: true,
-			slidesPerGroup: 3,
-			navigation: {
-				nextEl: '.js-characters-slider-btn-next',
-				prevEl: '.js-characters-slider-btn-prev',
-			},
-			pagination: {
-				el: '.js-characters-slider-pagination',
-				type: 'bullets',
-				clickable: true
-			},
+
+		$('.js-characters-slider').slick({
+			// centerMode: true,
+			// infinite: true,
+			slidesToShow: 3,
+			variableWidth: true,
+			slidesToScroll: 3,
+			dots: true,
+			appendDots: $('.js-characters-slider-pagination'),
+			prevArrow: $('.js-characters-slider-btn-prev'),
+			nextArrow: $('.js-characters-slider-btn-next'),
 		});
+
+	
+
+		
 	}
+
+	var animationBlocks = $('.opportunity').toArray();
+
+	$(window).on('scroll', function() {
+
+		var documentScroll = $(document).scrollTop();
+		var scroll = $(this).scrollTop();
+		var windowHeight = $(window).height();
+
+		animationBlocks.forEach(function(item) {
+			var itemOffset = $(item).offset().top;
+			var itemHeight = $(item).outerHeight();
+			var visibilityPoint = itemOffset - windowHeight;
+
+			if (documentScroll > visibilityPoint) {
+				$(item).addClass('is-animated');
+			}
+
+		});
+
+
+	});
+
+
+	setTimeout(function(){
+		$('body').addClass('is-loaded');
+	}, 1000);
 
 
 });

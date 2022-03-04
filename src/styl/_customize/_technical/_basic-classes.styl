@@ -24,6 +24,8 @@
 	font 54px $Bold
 	line-height 66px
 	margin-bottom 30px
+	position relative
+	z-index 3
 	
 .sect-description
 	margin-bottom 40px
@@ -104,43 +106,10 @@
 	
 
 .content
+	font-size 16px
 	*
 		&:last-child
 			margin-bottom 0
-			
-	h2,h3,h3,h4,h5,h6
-		line-height 1
-		font-family $Bold
+	p
+		margin-bottom 40px
 		
-	strong, b
-		font-family $Bold
-		
-
-	ul, ol
-		li
-			display block
-			position relative
-			margin-bottom 10px
-			
-			&:last-child
-				margin-bottom 0
-				
-	ul
-		li
-			&:before
-				pseudo()
-				width 4px
-				height 4px
-				border-radius 50%
-				margin-right 4px
-				background-color $text-color
-				
-	ol
-		counter-reset list
-		li
-			&:before
-				counter-increment list
-				content counter(list) ". "
-				display inline-block
-				margin-right 4px
-				

@@ -33,33 +33,53 @@
 	white-space nowrap
 	margin-left 40px
 	margin-right 40px
-	.swiper-pagination-bullet
-		width 16px
+	*
+		box-sizing border-box
+	.slick-dots
+		position relative
+		bottom auto
 		height 16px
-		border-radius 3px
-		background-color $basic-white-color
-		opacity 1
-		margin-right 25px
-		&-active
-			background-color $accent-color
-		&:last-child
-			margin-right 0
-		&:before
-			display none
+		display flex !important
+		flex-wrap nowrap
+		align-items center
+		li
+			display inline-block
+			margin 0 25px 0 0
+			height 16px
+			&:last-child
+				margin-right 0
+				
+			&.slick-active
+				button
+					background-color $accent-color
+				
+		button
+			width 16px
+			height 16px
+			border-radius 3px
+			background-color $basic-white-color
+			opacity 1
+			margin 0
+			&-active
+				background-color $accent-color
+			&:last-child
+				margin-right 0
+			&:before
+				display none
 	
 
 
 .characters-slider
 	
-	.swiper-container,
-	.swiper-wrapper
+	.slick-track,
+	.slick-list
 		overflow visible
 		
-
-	.swiper-slide
+	.slick-slide
 		width 330px
 		padding-left 15px
 		padding-right 15px
+
 		&:nth-child(5n+1)
 			.character-card__img
 				background-color $purple-bg
@@ -76,23 +96,4 @@
 			.character-card__img
 				background-color $green-bg
 		
-		
-.character-card
-	position relative
-	padding 15px
-	overflow hidden
-	background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.01) 100.01%)
-	border-radius 40px
-	&__inner
-		border-radius 34px
-		background linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.39) 100%)
-		padding 3px
-	&__img
-		height 330px
-		flex-col-center()
-		border-radius 33px
-		padding 40px 15px
-		background-color $purple-bg
-		img
-			@extends .content-img
 		

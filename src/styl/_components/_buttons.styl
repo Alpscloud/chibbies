@@ -5,6 +5,7 @@
 	font 14px $Bold
 	color $dark-text-color
 	line-height 1
+	z-index 1
 	span
 		border-radius 3px
 		background-color $accent-color
@@ -56,6 +57,19 @@
 			width calc(100% + 8px)
 			top -3px
 			left -4px
+			
+	&-light
+		color $alternate-color
+		span
+			background-color $basic-white-color
+		&:before
+			background-color $alternate-color
+			
+		&:hover
+			color $basic-white-color
+			span
+				background-color $alternate-color
+		
 			
 	
 		
