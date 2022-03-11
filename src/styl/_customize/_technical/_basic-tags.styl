@@ -23,7 +23,21 @@ body
 	opacity 1
 	position relative
 	color $text-color
+	
 	background-color $body-bg
+	&:before
+		pseudo()
+		position absolute
+		top 450px
+		bottom 0
+		horisontal-center()
+		z-index 1
+		pointer-events none
+		width 100%
+		mix-blend-mode overlay
+		background url('../img/backgrounds/stars.svg') top 450px center no-repeat / contain
+		
+
 
 h1,h2,h3,h4,h5,h6,ul,li
 	margin 0

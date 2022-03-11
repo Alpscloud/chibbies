@@ -201,3 +201,35 @@
 		right -140px !important
 		top auto !important
 		left auto !important
+		
+
+.circles
+	display block
+	border-radius 50%
+	background rgba(0,0,0, 0.3)
+	background linear-gradient(142.53deg, rgba(255, 255, 255, 0.015) 11.8%, rgba(255, 255, 255, 0.018) 88.04%)
+	backdrop-filter blur(144px)
+	position absolute
+	z-index -1
+	width 338px
+	height 338px
+	pointer-events none
+	&:before
+		pseudo()
+		position absolute
+		z-index 1
+		position-center()
+		border-radius 50%
+		width 200px
+		height 200px
+		background rgba(0,0,0, 0.45)
+		background linear-gradient(142.53deg, rgba(255, 255, 255, 0.05) 11.8%, rgba(255, 255, 255, 0.06) 88.04%)
+		box-shadow -1px 1px 1px rgba(0, 0, 0, 0.14), inset 1px 1px 1px rgba(255, 255, 255, 0.09);
+		backdrop-filter blur(144px)
+		
+	&-sm
+		width 208px
+		height 208px
+		&:before
+			width 123px
+			height 123px
