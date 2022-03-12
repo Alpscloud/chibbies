@@ -3,7 +3,9 @@
 	position relative
 	padding-top 110px
 	padding-bottom 75px
-	&:before
+	.comet
+		display none
+	&:after
 		pseudo()
 		position absolute
 		bottom -5px
@@ -34,7 +36,7 @@
 	span
 		display block
 		text-transform uppercase
-		font-size 114px
+		font 114px $Bold
 		line-height 1
 		
 
@@ -60,6 +62,11 @@
 	position relative
 	padding 60px 20px 50px
 	z-index 3
+	&__wrapper
+		position relative
+		.comet-tale,
+		.coin-9
+			display none
 	
 	&:before
 		pseudo()
@@ -210,6 +217,9 @@
 .sect__opportunities
 	margin-top -100px
 	padding-bottom 175px
+	position relative
+	.comet-tale
+		display none
 	.sect-title
 		max-width 555px
 		margin-left auto
@@ -242,6 +252,8 @@
 	&:nth-child(even)
 		flex-direction row
 		.opportunity-img
+			margin-right 0
+			margin-left 20px
 			img
 				transform translate(-50%, -50%) scaleX(-1)
 			&__inner
@@ -278,6 +290,7 @@
 	&-img
 		position relative
 		flex none
+		margin-right 20px
 		.comet
 			bottom 0
 			left -20px
@@ -358,6 +371,8 @@
 		flex none
 		width 330px
 		top 312px
+		.comet-tale
+			display none
 		&__img
 			height 430px
 			padding 15px
@@ -378,6 +393,9 @@
 	
 	position relative
 	z-index 3
+	
+	.comet
+		display none
 	
 	.circles
 		&-1
@@ -433,6 +451,7 @@
 	&-img
 		flex 1
 		display flex
+		margin-left 20px
 		justify-content center
 		img
 			display block
@@ -576,6 +595,8 @@
 	position relative
 	padding-bottom 100px
 	.comet
+		&-tale
+			display none
 		&-1
 			bottom -1100px
 			right 200px	

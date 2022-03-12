@@ -1,20 +1,27 @@
 <header class="header">
 	<div class="container">
 		<div class="row align-vertical-center align-horisontal-between header__row">
-			<span class="logo">Chabbies</span>
+			<span class="logo">Chibbies</span>
 
-			<div class="nav-wrapper">
+			<div class="nav-wrapper js-nav">
 				<div class="row align-horisontal-end align-vertical-center">
 					<!-- NAV -->
 					{% include '../components/nav.html' %}
 					<!-- //NAV -->
 
-					<a href="#" class="btn btn-transparent"><span>Whitepaper link</span></a>
-					<a href="#" class="btn"><span>Play & Earn</span></a>
+					<div class="btns">	
+						<a href="#" class="btn btn-transparent"><span>Whitepaper link</span></a>
+						<a href="#" class="btn"><span>Play & Earn</span></a>
+					</div>
 				</div>
 			</div>
 			
 		</div>
 	</div>
+
+
+	<button class="btn-hamburger js-open-mobile-menu-btn " type="button">
+		<span></span><span></span>
+	</button>
 
 </header>

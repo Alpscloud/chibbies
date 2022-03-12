@@ -22,16 +22,28 @@
 		backdrop-filter blur(44px)
 		opacity 0
 		
+
+	
+		
+	
+			
+	&.is-fixed
+		&:before
+			opacity 1
+			
+.btns
+	display flex
+	flex-wrap nowrap
+	justify-content space-between
+	align-items center
+	width 320px
 	.btn
+		flex none
 		width 100%
 		max-width 150px
-		margin-right 20px
+		white-space nowrap
 		span
 			padding-left 5px
 			padding-right 5px
 		&:last-child
 			margin-right 0
-			
-	&.is-fixed
-		&:before
-			opacity 1

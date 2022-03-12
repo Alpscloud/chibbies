@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Chabbies</title>
+	<title>Chibbies</title>
 
 	<!-- Meta tags -->
 	<meta charset="UTF-8">
@@ -43,9 +43,9 @@
 		<header class="header">
 	<div class="container">
 		<div class="row align-vertical-center align-horisontal-between header__row">
-			<span class="logo">Chabbies</span>
+			<span class="logo">Chibbies</span>
 
-			<div class="nav-wrapper">
+			<div class="nav-wrapper js-nav">
 				<div class="row align-horisontal-end align-vertical-center">
 					<!-- NAV -->
 					<nav class="nav">
@@ -58,13 +58,20 @@
 </nav>
 					<!-- //NAV -->
 
-					<a href="#" class="btn btn-transparent"><span>Whitepaper link</span></a>
-					<a href="#" class="btn"><span>Play & Earn</span></a>
+					<div class="btns">	
+						<a href="#" class="btn btn-transparent"><span>Whitepaper link</span></a>
+						<a href="#" class="btn"><span>Play & Earn</span></a>
+					</div>
 				</div>
 			</div>
 			
 		</div>
 	</div>
+
+
+	<button class="btn-hamburger js-open-mobile-menu-btn " type="button">
+		<span></span><span></span>
+	</button>
 
 </header>
 		<!-- //Header -->
@@ -86,6 +93,9 @@
 				<!-- //container -->
 
 				<div class="promo-stars js-item-parallax" data-parallax-direction="vertical-top" data-parallax-speed="0.1"></div>
+
+				<span class="comet comet-1"></span>
+				<span class="comet comet-2 comet-lg"></span>
 			</section>
 			<!-- //sect promo -->
 
@@ -220,6 +230,12 @@
 							<span class="coin coin-lg"></span>
 
 						</div>
+
+
+						<span class="comet-tale comet-tale-1"></span>
+						<span class="comet-tale comet-tale-sm comet-tale-2"></span>
+
+						<span class="coin coin-9"></span>
 					</div>
 				</div>
 				<!-- //container -->
@@ -291,6 +307,8 @@
 					</div>
 				</div>
 				<!-- //container -->
+
+				<span class="comet-tale"></span>
 			</section>
 			<!-- //sect opportunities -->
 
@@ -345,11 +363,15 @@
 								</div>
 							</div>
 
+							<span class="comet-tale"></span>
+
 							<div class="character-card-circles"></div>
 						</div>
 						<div class="character-3d__description" data-aos="flip-up">
-							<h2 class="sect-title">3D Characters = 3Dimensional rarity system</h2>
-							<p>When designing the Platform we gave every Chibbie not one but three rarities. With every game entering the Chibbies Metaverse, these rarities are mapped to a single attribute of that game.</p>
+							<div>
+								<h2 class="sect-title">3D Characters =<br> 3Dimensional<br> rarity system</h2>
+								<p>When designing the Platform we gave every Chibbie not one but three rarities. With every game entering the Chibbies Metaverse, these rarities are mapped to a single attribute of that game.</p>
+							</div>
 						</div>
 
 						<span class="comet-tale comet-tale-1 js-item-parallax" data-parallax-direction="vertical-bottom" data-parallax-speed="0.1"></span>
@@ -376,6 +398,8 @@
 								<img src="img/opp.png" alt="">
 							</div>
 						</div>
+
+						<span class="comet comet-lg"></span>
 
 						<span class="comet-tale comet-tale-3 js-item-parallax" data-parallax-direction="vertical-bottom" data-parallax-speed="0.1"></span>
 
@@ -511,6 +535,7 @@
 							</div>
 							<span class="comet comet-1 js-item-parallax" data-parallax-direction="vertical-top" data-parallax-speed="0.2"></span>
 							<span class="comet comet-2 comet-lg js-item-parallax" data-parallax-direction="vertical-top" data-parallax-speed="0.1"></span>
+							<span class="comet-tale"></span>
 						</div>
 					</div>
 					<!-- //container -->
@@ -528,8 +553,16 @@
 	<div class="container">
 		<div class="row align-vertical-center align-horisontal-between row-nowrap footer__row">
 			<div class="footer-col col-gutters">
-				<span class="logo">Chabbies</span>
+				<span class="logo">Chibbies</span>
 			</div>
+
+			<div class="footer-col footer-col__hidden">
+				<div class="btns">	
+					<a href="#" class="btn btn-transparent"><span>Whitepaper link</span></a>
+					<a href="#" class="btn"><span>Play & Earn</span></a>
+				</div>
+			</div>
+			
 			<div class="footer-col col-gutters">
 				<nav class="nav">
 	<ul class="nav__list">
@@ -576,13 +609,13 @@
 
 
 		<!-- Preloader -->
-<!-- <div class="preloader__wrapper">
+<div class="preloader__wrapper">
 	
 	<div class="preloader"><span></span></div>
 
 	<div class="preloader__section preloader__section--left"></div> 
 	<div class="preloader__section preloader__section--right"></div>
-</div>	 -->	
+</div>		
 <!--// Preloader -->
 	</div>
 	<!-- //CONTENT WRAPPER -->

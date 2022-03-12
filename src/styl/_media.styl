@@ -8,4 +8,674 @@
 +max-screen-height(maxHeight)
 +min-screen-height(minHeight)
 */
++max-screen(1200px)
+	.character-3d
+		padding-left 50px
+		padding-right 50px
+		
 
++max-screen(1100px)
+	.characters__wrapper
+		.coin-9
+			display inline-block
+			z-index -1
+			bottom -140px !important
+			left -50px !important
+			right auto !important
+			top auto !important
+			opacity 1
+			width 120px
+			height 120px
+			
+	// Opportunities
+	.sect__opportunities 
+		padding-bottom 250px
+		.sect-title
+			margin 0 auto 80px auto
+			text-align center
+			
+	.opportunity
+		flex-wrap wrap
+		justify-content center
+		max-width 600px
+		margin 0 auto 120px auto
+		&:last-child
+			margin-top 0
+			margin-bottom 0
+		&-counter
+			right 20px
+			
+		
+		&-text
+			order 1 
+			
+			max-width 100%
+			
+		&-img
+			order 2 
+			margin-right 0
+			margin-top 75px
+			
+		&:nth-child(even) 
+			.opportunity
+				&-counter
+					right auto
+					left 20px
+				&-text
+					order 1
+				&-img
+					margin-left 0
+					order 2
+					
+	.opportunity:last-child 
+		.coin
+			display none
+		.opportunity-text
+			max-width 100%
+			justify-content flex-start
+			div
+				max-width 100%
+				
+
+	.coin
+		&-8
+			margin-top -70px
+			
+	.opportunity.is-animated 
+		.coin
+			&-5
+				top -85px !important
+				left -199px !important
+			&-6
+				top -90px !important
+			&-7
+				left -140px !important
+			&-8
+				right auto  !important
+				left -60px !important
+				
+	.roadmap
+		padding-left 0
+		padding-right 0
+		
+	.roadmap-figures
+		bottom -750px
+		
+
+	.sect__opportunities
+		.comet-tale
+			transform scaleX(-1)
+			display inline-block
+			bottom 0
+			right -40px
+			
+	.character-3d
+		.character-card
+			.comet-tale
+				display inline-block
+				left -110px
+				bottom -60px
+				z-index -1
+				
+	.blockchain-wrapper
+		.comet-tale
+			display inline-block
+			top -170px
+			right -60px
+			transform scaleX(-1)
+		
+
+	.character-3d
+		flex-wrap wrap
+		padding-left 0
+		padding-right 0
+		
+		.character-card
+			order 2
+			transform none !important
+			top auto
+			margin 0 auto
+			
+		&__description
+			order 1
+			flex none
+			padding-left 0
+			width 100%
+			margin-bottom 120px
+			div
+				max-width 600px
+				margin 0 auto
+				text-align center
+				
+	.discord
+		margin-top 220px
+			
++max-screen(992px)
+	.header
+		.row
+			justify-content center
+		.logo
+			position relative
+			z-index 91
+	.nav-wrapper
+		position fixed
+		top 0
+		left 0
+		z-index 90
+		width 100%
+		height 100vh
+		overflow-y auto
+		padding 0 20px 80px
+		background-color $body-bg
+		transition all .23s ease-in-out
+		opacity 0
+		visibility hidden
+		display flex
+		align-items center
+		justify-content center
+		pointer-events none
+		&.is-opened
+			opacity 1
+			visibility visible
+			pointer-events auto
+		
+		.row
+			flex-wrap nowrap
+			flex-direction column
+			padding-top 80px
+			flex 1
+			
+			
+	
+	.header		
+		.nav
+			margin-right 0
+			margin-bottom 30px
+			text-align center
+			&__item
+				display block
+				margin-right 0
+				margin-bottom 25px
+				&:last-child
+					margin-bottom 0
+				
+	.btn-hamburger
+		display inline-block
+		
+	.footer
+		padding 60px 0
+		&__row
+			flex-wrap wrap
+		&-col
+			width 100%
+			margin-bottom 50px
+			text-align center
+			.btns
+				margin 0 auto
+			&__hidden
+				display block
+			&:last-child
+				margin-bottom 0
+	
++max-screen(767px)
+	body
+		font-size 16px
+		line-height 19.5px
+		
+	.sect-title
+		font-size 30px
+		line-height 37px
+		margin-bottom 27px		
+		
+	.discord
+		&-img
+			display none
+		&-text
+			width 100%
+			
+		.circles
+			display none
+			
+
+	.js-item-parallax
+		transform none !important
+		
+	.roadmap-figures
+		top auto
+		bottom 0
+		
+	.blockchain-wrapper 
+		.comet-1
+			display none
+		.comet-2
+			bottom 20px
+			left -20px
+			
+	.roadmap-wrapper 
+		.comet-1
+			bottom 100%
+			margin-bottom 150px
+			left 50px
+			
+		.comet-2
+			display none
+			
+	
+		
+	.discord
+		.comet-tale
+			display none
+		.comet
+			display inline-block
+			bottom 100%
+			right 20px
+			margin-bottom 30px
+
+	.character-3d__description
+		p
+			max-width 440px
+			margin 0 auto
+			
+	
+
++max-screen(620px)
+	.btn-lg
+		font-size 16px
+		
+	body
+		&:before
+			background-size auto 100%
+			top 0
+		
+	.title
+		font-size 20px
+		line-height 24px
+		position relative
+		z-index 7
+		span
+			font-size 54px
+			line-height 66px
+			margin-bottom 6px
+			
+	.sect__promo
+		padding-top 0
+		padding-bottom 0
+		background-size 626px auto
+		background-position top 190px center
+		min-height auto
+		&:after
+			height 55px
+			bottom 40px
+			
+		.comet
+			display inline-block
+			z-index 8
+			&-1
+				top 80px
+				left 20px
+			&-2
+				top 70px
+				right -30px
+		
+		
+		.container
+			padding-left 0
+			padding-right 0
+			z-index 7
+			padding-top 150px
+			&:before
+				pseudo()
+				position absolute
+				pointer-events none
+				top -250px
+				left -400px
+				z-index 6
+				width 954px 
+				height 830px
+				background url('../img/decor/promo-circle-mobile.svg') no-repeat
+			
+	.promo-stars
+		display none
+			
+	.promo-block
+		min-height 455px
+		background-image inherit
+		background-size cover
+		text-align center
+		position relative
+		padding-left 20px
+		padding-right 20px
+	
+		&:before
+			pseudo()
+			position absolute
+			top 30px
+			left 0
+			width 100%
+			height 55px
+			z-index 5
+			background linear-gradient(180deg, rgba(72, 16, 127, 0) 0%, #48107F 86.98%)
+			transform rotate(-180deg)
+		// &:after
+		// 	pseudo()
+		// 	position absolute
+		// 	width 100%
+		// 	height 100%
+		// 	background url('../img/decor/promo-img-decor.svg') no-repeat / cover
+		// 	horisontal-center()
+		// 	height 320px
+		// 	top 0
+		&__img
+			margin-top 0
+			img
+				display block
+				width 500px
+				position relative
+				left 50%
+				transform translateX(-50%)
+				z-index 7
+				
+			.btn
+				position relative
+				bottom auto
+				left auto
+				transform none
+				margin-top 23px
+				
+	.sect__characters
+		padding-top 65px
+		
+	// Collections
+	.characters
+		padding 60px 30px 80px 30px
+		&:before
+			border-radius 30px
+		
+	.pin
+		width 42px
+		height 42px
+		&:nth-child(1)
+			top 10px
+			left 10px
+		&:nth-child(2)
+			top 10px
+			right 10px
+		&:nth-child(3)
+			bottom 10px
+			left 10px
+		&:nth-child(4)
+			bottom 10px
+			right 10px
+			
+
+	.characters-slider 
+		.slick-slide
+			width 270px
+			padding-left 10px
+			padding-right 10px
+			
+	.character-card
+		padding 10px
+		
+		&__img
+			height 270px
+			
+
+	.characters__wrapper
+		position relative
+		.comet-tale
+			display inline-block
+			&-1
+				top -60px
+				left -45px
+			&-2
+				top 45px
+				right -40px
+				
+		
+				
+	.coin-lg
+		width 222px
+		height 222px
+		
+	.characters 
+		.coin
+			bottom -111px !important
+			right -81px !important
+			
+
+	.opportunities
+		padding-left 0
+		padding-right 0
+		
+	.opportunity
+		max-width 400px
+		&-counter
+			font-size 94px
+			top -70px
+		&-img
+			&:after
+				width 780px
+			&__inner
+				width 275px
+				height 275px
+				&:before
+					width 216px
+					height 216px
+					padding-top 0
+				&:after
+					width 33px
+					height 187px
+					left -30px
+			img
+				width 190px
+				
+	.opportunity:nth-child(even) 
+		.opportunity-img__inner:after
+			right -30px
+			z-index -1
+				
+	.coin
+		&-1
+			width 115px
+			height 115px
+		&-2
+			width 167px
+			height 167px
+		&-3
+			width 60px
+			height 60px
+		&-4
+			width 75px
+			height 75px
+		&-5
+			width 130px
+			height 130px
+		&-6
+			width 144px
+			height 144px
+		&-7
+			width 62px
+			height 62px
+		
+			
+	.opportunity.is-animated 
+		.coin
+			&-1
+				left -20px !important
+			&-2
+				right -60px !important
+				bottom -45px !important
+			&-3
+				top -60px !important
+			&-4
+				right -40px !important
+			&-5
+				left -50px !important
+				top -45px !important
+			&-6
+				right -45px !important
+				top -45px !important
+			&-7
+				left -100px !important
+			
+
+	.discord
+		.circles
+			display none
+		&-inner
+			padding 40px 50px
+			
+			.sect-title
+				margin-bottom 22px
+				font-size 30px
+				line-height 37px
+				
+			p
+				max-width 240px
+				margin 0 auto 20px auto
+				
+	.sect__character-3d
+		padding-bottom 130px
+	
+	.roadmap
+		padding-bottom 140px
+		
+	.roadmap-step
+		padding 20px
+		flex-wrap wrap
+		&__description
+			flex none
+			width 100%
+		&__information
+			flex 1
+			margin-right 0
+			margin-bottom 30px
+		&__status
+			flex 1
+
+
+	.blockchain-wrapper
+		padding-bottom 140px
+		
+	.sect__roadmap .sect-title
+		margin-bottom 50px
+		
+	.blockchain-block__title
+		font-size 20px
+		line-height 24px
+		display flex
+		align-items center
+		padding-bottom 65px
+		margin-bottom 40px
+		
+	.blockchain-block
+		margin-bottom 100px
+		.content
+			text-align left
+			padding-left 20px
+			padding-right 20px
+			
+	.roadmap-figures
+		top auto
+		bottom 130px
+		width 100%
+		height 1570px
+		
+		background-image url('../img/backgrounds/roadmap-bg-mobile.svg')
+		background-size auto 100%
+		
+
+	.footer
+		.nav__item
+			margin-right 0
+			display block
+			margin-bottom 27px
+			&:last-child
+				margin-bottom 0
+				
+	.character-3d
+		&__description
+			margin-bottom 70px
+			p
+				max-width 300px
+		.character-card
+			width 280px
+			box-shadow 0px 4px 84px rgba(0, 0, 0, 0.25)
+			left -20px
+			&__img
+				height 365px
+				
+	.character
+		&-params
+			width 290px
+		&-param
+			
+			&__content
+				padding 7.5px
+				height 50px
+			&__img
+				width 35px
+				height 35px
+				background-size 20px 20px
+			&__value
+				font-size 16px
+				
+	.character-card-circles
+		width 517px
+		height 517px
+		background linear-gradient(142.53deg, rgba(255, 255, 255, 0.005) 11.8%, rgba(255, 255, 255, 0.006) 88.04%)
+		&:before
+			width 405px
+			height 405px
+			
+	.discord
+		margin-top 200px
+			
+
+
++max-screen(500px)
+	.sect__promo
+		background-size 560px auto
+		&:after
+			bottom 65px
+			
+	body
+		&:before
+			top 0
+			background-image url('../img/backgrounds/stars-mobile.svg')
+	
+
++max-screen(364px)
+	.btns
+		flex-wrap wrap
+		flex-direction column
+		width 100%
+		.btn
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
+				
+	.promo-block__img img
+		width 410px
+		
+	.slider-pagination
+		margin-left 20px
+		margin-right 20px
+		
+	.sect-title
+		br
+			display none
+			
+	.sect__characters
+		background-image none
+		.container
+			padding-left 0
+			padding-right 0
+			
+	.discord-inner
+		padding-left 20px
+		padding-right 20px
+			
+	
+		
