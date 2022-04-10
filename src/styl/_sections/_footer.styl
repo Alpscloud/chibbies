@@ -1,6 +1,5 @@
 .footer
 	background-color $footer-bg
-	padding 50px 0 100px
 	position relative
 	z-index 3
 	&-col__hidden
@@ -9,6 +8,9 @@
 	.nav
 		text-align center
 		margin-right 0
+		
+	&-content
+		padding 50px 0 74px
 	
 .socials
 	white-space nowrap
@@ -28,3 +30,26 @@
 			svg()
 		&:hover
 			opacity .8
+			
+
+.subscribe
+	padding 76px 0
+	background-color $subscribe-bg 
+	&-text
+		color $basic-white-color
+		font 14px $Med
+		line-height 17px
+		max-width 410px
+	&-title
+		font 20px $Bold
+		margin-bottom 16px
+		
+	&-form
+		width 100%
+		max-width 650px
+	
+		
+		.btn
+			width 170px
+			flex none
+			font-size 20px

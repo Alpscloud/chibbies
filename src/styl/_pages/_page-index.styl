@@ -11,8 +11,8 @@
 		bottom -5px
 		width 100%
 		z-index 1
-		height 150px
-		background linear-gradient(180deg, rgba(72, 16, 127, 0) 0%, #48107F 86.98%)
+		height 534px
+		background radial-gradient(100% 100% at 50% 0%, rgba(227, 228, 255, 0) 53.12%, #E3E4FF 91.15%)
 	
 	.container
 		position relative
@@ -33,10 +33,11 @@
 .title
 	font 44px $SemiBold
 	text-align center
+	color #FBFBFB
 	span
 		display block
 		text-transform uppercase
-		font 114px $Bold
+		font 174px $Bold
 		line-height 1
 		
 
@@ -57,11 +58,20 @@
 // Characters
 .sect__characters
 	padding 55px 0 240px
-	background url('../img/decor/characters-bg.png') top 55px center no-repeat
+	background url('../img/decor/characters-bg2.png') top 55px center no-repeat / contain
 .characters
 	position relative
-	padding 60px 20px 50px
+	padding 60px 140px 50px
 	z-index 3
+	&-content
+		max-width 560px
+	&-img
+		position absolute
+		right 70px
+		top -110px
+		width 378px
+		img
+			display block
 	&__wrapper
 		position relative
 		.comet-tale,
@@ -77,20 +87,22 @@
 		background rgba(0,0,0, 0.3)
 		background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.006) 100.01%)
 		
-		box-shadow 0px 4px 124px rgba(0, 0, 0, 0.15), inset 1px 2px 0px rgba(255, 255, 255, 0.13), inset -1px -2px 0px rgba(0, 0, 0, 0.1)
+		box-shadow 0px 4px 124px rgba(0, 0, 0, 0.12), inset 1px 2px 0px rgba(255, 255, 255, 0.13), inset -1px -2px 0px rgba(0, 0, 0, 0.1)
 		backdrop-filter blur(44px)
 
 			
 	.sect-description
-		margin 0 auto 40px
-		max-width 660px
+		font-size 16px
 		
 	
 .character-card
 	position relative
 	padding 15px
-
+	box-shadow inset 1px 1px 0px rgba(255, 255, 255, 0.05), inset -1px -1px 0px rgba(0, 0, 0, 0.1)
+	background rgba(255, 255, 255, 0.01)
 	background linear-gradient(148.97deg, rgba(255, 255, 255, 0.06) 3.83%, rgba(255, 255, 255, 0.01) 100.01%)
+	filter drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.15))
+	backdrop-filter blur(94px)
 	border-radius 40px
 	&__inner
 		border-radius 34px
@@ -133,7 +145,10 @@
 	border-radius 50%
 	position absolute
 	position-center()
-	background linear-gradient(142.53deg, rgba(255, 255, 255, 0.005) 11.8%, rgba(255, 255, 255, 0.006) 88.04%)
+	background rgba(25, 30, 159, 0.018)
+	background linear-gradient(142.53deg, rgba(37, 44, 241, 0.015) 11.8%, rgba(25, 30, 159, 0.018) 88.04%)
+	box-shadow 0px 5px 64px rgba(0, 0, 0, 0.1), inset 1px -1px 1px rgba(0, 0, 0, 0.13), inset 1px 1px 1px rgba(255, 255, 255, 0.19)
+	backdrop-filter blur(94px)
 	z-index -1
 	&:before
 		pseudo()
@@ -142,8 +157,9 @@
 		width 680px
 		height 680px
 		border-radius 50%
-		background linear-gradient(142.53deg, rgba(255, 255, 255, 0.02) 11.8%, rgba(255, 255, 255, 0.024) 88.04%)
-		box-shadow -1px 1px 1px rgba(0, 0, 0, 0.14), inset 1px 1px 1px rgba(255, 255, 255, 0.09);
+		background rgba(217, 26, 118, 0.134)
+		background linear-gradient(142.53deg, rgba(51, 47, 255, 0.066) 11.8%, rgba(217, 26, 118, 0.134) 88.04%)
+		box-shadow inset 1px -2px 1px rgba(0, 0, 0, 0.09), inset 1px 1px 1px rgba(255, 255, 255, 0.29)
 		backdrop-filter blur(144px)
 		z-index 2
 		
@@ -240,7 +256,7 @@
 	flex-direction row-reverse
 	margin-bottom 60px
 	&:last-child
-		margin-top -60px
+		
 		flex-direction row
 		.opportunity-text
 			
@@ -271,19 +287,25 @@
 	&-counter
 		display inline-block
 		position absolute
-		top -65px
+		top -18px
 		right 0
+		opacity .2
 		font 94px $ExBold
 		color transparent
 		-webkit-text-stroke-width 2px
 		text-stroke-width 2px
-		-webkit-text-stroke-color #7A1FBF
-		text-stroke-color #7A1FBF
+		-webkit-text-stroke-color #3340EB
+
+		text-stroke-color #3340EB
 	&-text
 		width 100%
 		max-width 475px
 		position relative
 		z-index 3
+		h3
+			font 25px $Bold
+			color $basic-black-color
+			margin-bottom 16px
 		div
 			position relative
 			z-index 1
@@ -311,9 +333,10 @@
 			position relative
 			flex none
 			border-radius 50%
-			background rgba(0,0,0, 0.3)
+			background rgba(255, 255, 255, 0.018)
 			background linear-gradient(142.53deg, rgba(255, 255, 255, 0.015) 11.8%, rgba(255, 255, 255, 0.018) 88.04%)
 			backdrop-filter blur(144px)
+			box-shadow 0px 24px 64px rgba(0, 0, 0, 0.07), inset 1px -1px 1px rgba(0, 0, 0, 0.11), inset 1px 1px 1px rgba(255, 255, 255, 0.49)
 			&:after
 				pseudo()
 				position absolute
@@ -331,8 +354,9 @@
 				padding-top 75%
 				border-radius 50%
 				z-index 1
-				background rgba(255, 255, 255, 0.05)
+				background rgba(255, 255, 255, 0.06) 
 				background linear-gradient(142.53deg, rgba(255, 255, 255, 0.05) 11.8%, rgba(255, 255, 255, 0.06) 88.04%)
+				backdrop-filter blur(144px)
 				box-shadow -1px 1px 1px rgba(0, 0, 0, 0.14), inset 1px 1px 1px rgba(255, 255, 255, 0.09)
 				backdrop-filter blur(144px)
 			img
@@ -354,23 +378,17 @@
 	padding-right 110px
 	position relative
 	z-index 1
-	&:before
-		pseudo()
-		z-index -1
-		position absolute
-		top -300px
-		mix-blend-mode overlay
-		left -600px
-		width 1500px
-		height 1380px
-		background url('../img/decor/shine-lg.svg') no-repeat / contain
-		pointer-events none
-		opacity .15
+
+
+	
 	
 	.character-card
 		flex none
 		width 330px
 		top 312px
+		background rgba(255, 255, 255, 0.14)
+		box-shadow inset 1px 1px 0px rgba(255, 255, 255, 0.1), inset -1px -1px 0px rgba(0, 0, 0, 0.07)
+		background linear-gradient(148.97deg, rgba(255, 255, 255, 0.14) 3.83%, rgba(255, 255, 255, 0.04) 100.01%)
 		.comet-tale
 			display none
 		&__img
@@ -404,16 +422,14 @@
 		&-2
 			top -169px
 			right -169px
-	&-inner
+
 		
-		border-radius 40px
-		border 6px solid #000DB6
-		box-shadow 0px 14px 64px rgba(18, 35, 237, 0.4)
 	.btn
 		width auto
 		max-width none
+		font-size 20px
 		span
-			padding 20px 35px
+			padding 18px 24px
 	&-ic
 		display inline-block
 		width 81px
@@ -429,29 +445,37 @@
 			position absolute
 			position-center()
 			fill $discord-color 
+			
 	&-inner
+		border-radius 40px
+		border 6px solid #000DB6
+		box-shadow 0px 14px 64px rgba(18, 35, 237, 0.4)
 		background #2C3BFA
-		background linear-gradient(99.99deg, #424EE4 1.11%, #2C3BFA 100%)
+		background url('../img/backgrounds/discord-bg.svg') no-repeat top left, linear-gradient(99.99deg, #424EE4 1.11%, #2C3BFA 100%) 
 		border-radius 34px
-		padding 35px 80px
+		padding 35px 140px 50px 0
+		&:before
+			pseudo()
 		
 	&-text
 		width 330px
 		flex none
-		
-		.sect-title
-			font-size 40px
-			line-height 49px
-			margin-bottom 15px
-			
+		color $basic-white-color
 		p
-			font-size 16px
-			margin-bottom 30px
+			font-size 20px
+			margin-bottom 45px
+			
+	&-title
+		font 33px $ExBold
+		line-height 40px
+		margin-bottom 22px
+			
+		
 		
 	&-img
-		flex 1
+	
 		display flex
-		margin-left 20px
+		margin-right 20px
 		justify-content center
 		img
 			display block
@@ -459,6 +483,21 @@
 			height auto
 			object-fit cover
 			max-width 305px
+			
+
+.card-block
+	background-color $basic-white-color
+	box-shadow 0px 24px 59px rgba(3, 0, 162, 0.14), inset 1px 1px 0px rgba(255, 255, 255, 0.14), inset -1px -1px 0px rgba(0, 0, 0, 0.07)
+	border-radius 22px
+	padding 55px 25px 30px 25px
+	transition all .17s ease-in-out
+	&__inner
+		background-color $card-inner-bg
+		border-radius 15px
+		padding 18px 30px
+		color $lighter-text-color
+		font 16px $SemiBold
+		transition all .17s ease-in-out
 			
 // roadmap
 .sect__roadmap
@@ -483,6 +522,131 @@
 		position relative
 		z-index 2
 		
+
+.roadmap-step
+	display flex
+	margin-top -220px
+	position relative
+	z-index 2
+	pointer-events none
+	margin-bottom 120px
+	&:last-child
+		margin-bottom 0
+	&:first-child
+		margin-top 0
+	&:nth-child(even)
+		justify-content flex-end
+		
+		.roadmap-step
+			&__heading
+				justify-content flex-start
+				flex-direction row-reverse
+				
+			&__title
+				margin-right 0
+				margin-left 30px
+				
+			&__marker
+				span
+					left auto
+					right 45px
+					&:before
+						left 0
+						right auto
+		
+	&__content
+		width 100%
+		max-width 490px
+		padding 30px
+		min-height 314px
+		
+
+		.card-block__inner
+			min-height 114px
+	
+	&__title
+		color #2F2F2F
+		font 40px $Bold
+		flex 1
+		margin-right 20px
+		
+	&__heading
+		display flex
+		flex-wrap nowrap
+		align-items center
+		justify-content space-between
+		margin-bottom 27px
+		
+	&__marker
+		display block
+		position relative
+		flex none
+		width 58px
+		height 58px
+		border-radius 50%
+		background-color #F0F1FC 
+		span
+			display block
+			position absolute
+			vertical-center()
+			left 45px
+			width 140px
+			height 4px
+			background-color #CDD1F7
+			overflow hidden
+			&:before
+				pseudo()
+				position absolute
+				right 0
+				height 100%
+				width 25% 
+				background-color #3341EB
+		&:before,
+		&:after
+			pseudo()
+			transition all .17s ease-in-out
+			border-radius 50%
+			position absolute
+			position-center()
+		&:before
+			width 40px
+			height 40px
+			border 4px solid #3341EB
+		&:after
+			width 20px
+			height 20px
+			background-color #3341EB
+			box-shadow 0px 2px 5px 1px rgba(51, 65, 235, 0.55)
+			
+	&__info
+		margin-bottom 20px
+		display flex
+		align-items center
+		justify-content space-between
+		flex-wrap nowrap
+		
+	&__date
+		color #3341EB
+		transition all .17s ease-in-out
+		font 17px $Bold
+		line-height 20px
+		
+	&__status
+		flex none
+		flex-col-center()
+		transition all .17s ease-in-out
+		text-align center
+		box-shadow 0px 7px 10px rgba(191, 237, 206, 0.4)
+		background-color #BFEDCE
+		border-radius 7px
+		color $active-color
+		font 16px $Bold
+		width 100%
+		height 35px
+		max-width 170px
+
+			
+		
 .roadmap-figures
 	position absolute
 	bottom -430px
@@ -490,7 +654,8 @@
 	width 100%
 	height 100%
 	background url('../img/backgrounds/roadmap-bg.svg') center top  no-repeat
-	mix-blend-mode luminosity
+	mix-blend-mode color-dodge
+	
 	
 // .roadmap-grid
 // 	position absolute
@@ -506,89 +671,29 @@
 	
 	
 .roadmap
-	padding-left 90px
-	padding-right 90px
 	padding-bottom 180px
 	position relative
 	&-wrapper
 		position relative
-		.comet
-			&-1
-				bottom -430px
-				left 200px
-			&-2
-				bottom 540px
-				right 160px
-	&:before
-		pseudo()
-		width 2035px
-		height 1820px
-		background url('../img/decor/roadmap-shine.svg') no-repeat 50% / contain
+	&-indicator
 		position absolute
-		top 0
-		right -500px
-		z-index -2
+		width 4px
+		background-color  #CDD1F7
+		position absolute
+		horisontal-center()
+		top 60px
+		bottom 438px
+
+		overflow hidden
+		&__line
+			display block
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 25%
+			background-color #3341EB
 	
-		
-	&-step
-		margin-bottom 20px
-		background rgba(0,0,0, .3)
-		background linear-gradient(97.97deg, rgba(255, 255, 255, 0.09) 1.62%, rgba(255, 255, 255, 0.072) 100%)
-		box-shadow inset 1px 1px 0px rgba(255, 255, 255, 0.14), inset -1px -1px 0px rgba(0, 0, 0, 0.07)
-		backdrop-filter blur(20px)
-		border-radius 22px
-		padding 15px
-		position relative
-		z-index 3
-		
-		&.not-completed
-			.roadmap-step
-				&__count
-					color #DCC3EA
-				&__status
-					background-color $inactive-color
-					color #CB8A0B
-					box-shadow none
-		&:last-child
-			margin-bottom 0
-			
-		&__information
-			display flex
-			flex-wrap nowrap
-			margin-right 30px
-			
-		&__title
-			font 20px $Bold
-			margin-bottom 6px
-			color $text-color
-			
-		&__description
-			font 16px $SemiBold
-			color rgba(255, 255, 255, 0.51)
-			line-height 20px
-			
-		&__status
-			flex-col-center()
-			text-align center
-			color $basic-white-color
-			border-radius 10px
-			font 16px $Bold
-			width 150px
-			background-color $active-color
-			box-shadow 0px 4px 49px rgba($active-color, 0.75)
-		&__count
-			flex-col-center()
-			width 70px
-			height 70px
-			text-align center
-			
-			border-radius 10px
-			box-shadow 0px 4px 8px rgba(0, 0, 0, 0.21)
-			color #3B0957
-			font 33px $ExBold
-			flex none
-			margin-right 15px
-			background-color $basic-white-color
 	
 
 .blockchain-wrapper
@@ -605,21 +710,164 @@
 			left 200px	
 
 .blockchain-block
-	margin-bottom 115px
+	margin-bottom 110px
 	&:last-child
 		margin-bottom 0
 		
-	.content
-		margin 0 auto
-		max-width 460px
+.blockchain
+	&-img
+		img
+			display block
+			margin 0 auto
+			position relative
+		&-skeleton
+			img
+				
+				transform translateX(60px)
+				width 558px
+				
+		&-cactus
+			img
+				width 462px
+				transform translateX(120px)
+	
+	&-items
+		display flex
+		justify-content center
+		margin-left -40px
+		margin-right -40px
+		position relative
+		z-index 1
+		margin-top -90px
 		
-	&__title
-		text-align center
-		color $dark-text-color
-		font 34px $Bold
-		padding 40px 50px 80px
-		background-position 50%
-		background-repeat no-repeat
-		background-size contain
-		width fit-content
-		margin 0 auto 20px auto
+	&-item
+		height 100%
+		background rgba(255, 255, 255, 0.2)
+		background linear-gradient(97.97deg, rgba(255, 255, 255, 0.09) 1.62%, rgba(255, 255, 255, 0.072) 100%)
+		border 1px solid #8F00FF
+		box-sizing border-box
+		box-shadow 0px 24px 59px rgba(3, 0, 162, 0.14), inset 1px 1px 0px rgba(255, 255, 255, 0.14), inset -1px -1px 0px rgba(0, 0, 0, 0.07)
+		backdrop-filter blur(30px)
+		border-radius 22px
+		padding 100px 30px 30px
+		display flex
+		flex-direction column
+		&__ic
+			display inline-block
+			position absolute
+			width 93px
+			height 93px
+			background-color $accent-color
+			border-radius 20px
+			box-shadow 0px 24px 54px rgba(241, 184, 35, 0.35)
+			background-size 0
+			top -46.5px
+			&-blue
+				background-color $alternate-color
+			span
+				display inline-block
+				position absolute
+				position-center()
+				width 75px
+				height 75px
+				background-color $basic-white-color
+				background-position 50%
+				background-size 43px
+				background-repeat no-repeat
+				background-image inherit
+				border-radius 11px
+				box-shadow 0px 3px 3px rgba(0, 0, 0, 0.11)
+		
+		&__text
+			background-color $basic-white-color
+			border-radius 15px
+			padding 20px
+			font 16px $SemiBold
+			color $lighter-text-color
+			flex 1
+		
+		&__wrapper
+			padding-left 40px
+			padding-right 40px
+			width 100%
+			max-width 485px
+		
+.wax-blockchain
+	&-items
+		position relative
+		margin-top -140px
+		margin-left -20px
+		margin-right -20px
+		display flex
+		align-items center
+		justify-content space-between
+	&-item
+		background-color $basic-white-color
+		box-shadow 0px 24px 59px rgba(3, 0, 162, 0.14), inset 1px 1px 0px rgba(255, 255, 255, 0.14), inset -1px -1px 0px rgba(0, 0, 0, 0.07)
+		border-radius 22px
+		padding 30px
+		min-height 255px
+		display flex
+		flex-direction column
+		&__text
+			flex 1
+			background-color  #F3EAFF
+			border-radius 15px
+			padding 45px 15px
+			text-align center
+			display flex
+			align-items center
+			justify-content center
+			flex-direction column
+			font 16px $SemiBold
+			line-height 20px
+			color #8A6BB0
+		&__wrapper
+			padding-left 20px
+			padding-right 20px
+			width 33.33333%
+	
+
+.shine-decor
+	position absolute
+	z-index -1
+	background-repeat no-repeat
+	background-size contain
+	background-position 50%
+	pointer-events none
+	background-image url('../img/decor/shines/shine-blue.svg')
+	width 1786px
+	height 1528px
+	
+	&-purple
+		background-image url('../img/decor/shines/shine-purple.svg')
+		top 0
+		left 0
+
+
+
+.roadmap-wrapper
+	.shine-decor
+		bottom -300px
+		right -700px
+		transform rotate(-73.12deg)
+		
+		
+
+.blockchain-wrapper
+	.shine-decor
+		&-top
+			top -700px
+			left -900px
+			transform rotate(17.64deg)
+		&-bottom
+			bottom -800px
+			left 170px
+			transform rotate(39deg)
+		
+.character-3d
+	.shine-decor
+		left -900px
+		top -300px
+		z-index -1
+		transform rotate(17.64deg)
