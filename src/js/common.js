@@ -141,6 +141,7 @@ $(document).ready(function() {
 	}
 
 	var animationBlocks = $('.opportunity').toArray();
+	var roadmap = $('.js-roadmap-step').toArray();
 
 	$(window).on('scroll', function() {
 
@@ -159,8 +160,114 @@ $(document).ready(function() {
 
 		});
 
+		// roadmap.forEach(function(item) {
+		// 	var itemOffset = $(item).offset().top;
+		// 	var itemHeight = $(item).outerHeight();
+		// 	var visibilityPoint = itemOffset + 150 - windowHeight;
+
+		// 	if (documentScroll > visibilityPoint) {
+		// 		$(item).removeClass('is-disabled');
+		// 	}
+
+		// });
+
 
 	});
+
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	TweenLite.defaultEase = Power0.easeNone;
+
+	//var lines = gsap.utils.toArray('.program-progress__line');
+
+	$('.js-roadmap-step').each(function(e) {
+		var tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: $(this),
+				start: 'top 300px',
+				end: 'bottom top',
+				scrub: true,
+				addClass: 'is-disabled',
+				markers: true
+		
+			}
+		});
+
+	});
+
+
+	// var roadmap = $('.js-roadmap-step').toArray();
+
+	// if (roadmap.length > 0) {
+	// 	var  observer = new IntersectionObserver(function (entries, observer) {
+	// 		entries.forEach(function(entry) {
+	// 			if (entry.isIntersecting) {
+	// 				console.log(entry);
+	// 				entry.target.classList.remove('is-disabled')
+	// 			} 
+	// 		});
+	// 	});
+
+	// 	roadmap.forEach(function(item) {
+	// 		observer.observe(item);
+	// 	})
+
+
+	// }
+
+
+	// var tl_1 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: '.roadmap-wrapper',
+	// 		start: 'top 100px',
+	// 		end: 'bottom top',
+	// 		scrub: true,
+	// 		markers: true
+			
+	// 	}
+	// });
+
+	// tl_1.to($('.roadmap-indicator__line') , 1, {
+	// 	height: '150%'
+	// });
+
+
+	// var tl_1 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: '.js-program-step-1',
+	// 		start: 'top top',
+	// 		end: 'bottom top',
+	// 		scrub: true,
+	// 		toggleClass: 'is-active',
+	// 		markers: false
+			
+	// 	}
+	// });
+
+	// var tl_2 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: '.js-program-step-2',
+	// 		start: 'top 20px top',
+	// 		end: 'bottom top',
+	// 		scrub: true,
+	// 		toggleClass: 'is-active',
+	// 		markers: false
+			
+	// 	}
+	// });
+
+	// var tl_3 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: '.js-program-step-3',
+	// 		start: 'top 20px top',
+	// 		end: 'bottom top',
+	// 		scrub: true,
+	// 		toggleClass: 'is-active',
+	// 		markers: false
+			
+	// 	}
+	// });
 
 
 	setTimeout(function(){

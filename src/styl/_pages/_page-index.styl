@@ -506,18 +506,7 @@
 	.sect-title
 		margin-bottom 70px
 		
-	// &:before
-	// 	pseudo()
-	// 	position absolute
-	// 	top 0
-	// 	left 0
-	// 	width 100%
-	// 	height 100%
-	// 	background url('../img/backgrounds/roadmap-bg.svg') center bottom -150px no-repeat
-	// 	mix-blend-mode luminosity
-	
 
-		
 	.container
 		position relative
 		z-index 2
@@ -528,16 +517,49 @@
 	margin-top -220px
 	position relative
 	z-index 2
-	pointer-events none
+	//pointer-events none
 	margin-bottom 120px
+	&.is-disabled
+		.roadmap-step
+			&__title,
+			&__date
+				color #CDD1F6
+			&__status
+				box-shadow none
+				background-color #F0F1FC
+				color #CDD1F6
+			&__marker
+				&:before
+					border-color #CDD1F6
+				&:after
+					box-shadow none
+					background-color #CDD1F6
+				&-line
+					span
+						width 0
+						
+			&__progress
+				span
+					height 0
+				
 	&:last-child
 		margin-bottom 0
+		.roadmap-step__progress
+			display none
 	&:first-child
 		margin-top 0
 	&:nth-child(even)
 		justify-content flex-end
 		
 		.roadmap-step
+			&__content-wrapper
+				padding-right 0
+				padding-left 16px
+				display flex
+				justify-content flex-end
+			&__progress
+				right auto
+				left 0
 			&__heading
 				justify-content flex-start
 				flex-direction row-reverse
@@ -546,13 +568,16 @@
 				margin-right 0
 				margin-left 30px
 				
-			&__marker
+			&__marker-line
+				left auto
+				right 45px
+				&:before
+					left 0
+					right auto
+					
 				span
-					left auto
-					right 45px
-					&:before
-						left 0
-						right auto
+					right auto
+					left 0
 		
 	&__content
 		width 100%
@@ -585,7 +610,7 @@
 		height 58px
 		border-radius 50%
 		background-color #F0F1FC 
-		span
+		&-line
 			display block
 			position absolute
 			vertical-center()
@@ -594,12 +619,13 @@
 			height 4px
 			background-color #CDD1F7
 			overflow hidden
-			&:before
-				pseudo()
+			span
+				display block
 				position absolute
 				right 0
 				height 100%
-				width 25% 
+				width 100%
+				transition width .17s ease-in-out
 				background-color #3341EB
 		&:before,
 		&:after
@@ -656,14 +682,7 @@
 	background url('../img/backgrounds/roadmap-bg.svg') center top  no-repeat
 	mix-blend-mode color-dodge
 	
-	
-// .roadmap-grid
-// 	position absolute
-// 	top 0
-// 	left 0
-// 	width 100%
-// 	height 100%
-// 	background url('../img/backgrounds/roadmap-bottom-bg.png') center bottom -100px no-repeat
+
 	
 .roadmap-inner
 	background url('../img/backgrounds/roadmap-bottom-bg.png') center bottom -100px no-repeat
@@ -682,7 +701,7 @@
 		position absolute
 		horisontal-center()
 		top 60px
-		bottom 438px
+		bottom 437px
 
 		overflow hidden
 		&__line
@@ -691,10 +710,35 @@
 			top 0
 			left 0
 			width 100%
-			height 25%
+			height 0
 			background-color #3341EB
 	
+
+.roadmap-step__content-wrapper
+	width calc(50% + 2px)
+	position relative
+	//overflow hidden
+	padding-right 16px
 	
+.roadmap-step
+	&__progress
+		width 4px
+		background-color  #CDD1F7
+		position absolute
+		overflow hidden
+		top 57px
+		bottom 39px
+		right 0
+		span
+			display block
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			transition height .17s ease-in-out
+			background-color #3341EB
+			z-index 1
 
 .blockchain-wrapper
 	position relative
